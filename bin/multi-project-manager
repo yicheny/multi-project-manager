@@ -1,0 +1,14 @@
+#!/usr/bin/env node
+'use strict';
+
+const process = require('process')
+const mpmError = require('../lib/mpmError');
+const createCLI = require('../lib/cli');
+const tryExecute = require('../lib/tryExecute');
+
+tryExecute(
+    () => {
+        createCLI().execute(process.argv);
+    },
+    null,
+    ()=>mpmError.createLog());

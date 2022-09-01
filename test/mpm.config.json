@@ -1,0 +1,18 @@
+{
+  "errorLogPath": "./logs",
+  "branch": "0.0.1",
+  "type": "add",
+  "projects": [],
+  "scripts": [
+
+  ],
+  "noneScripts": [
+    "mpm --time=5",
+    "mpm --time=4",
+    "mpm --read=./test/packInfo.json",
+    "mpm -v",
+    "mpm -h",
+    "mpm --test",
+    "mockMpm --test"
+  ]
+}

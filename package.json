@@ -1,0 +1,33 @@
+{
+  "name": "multi-project-manager",
+  "version": "0.0.1",
+  "description": "Multiple project management scripts",
+  "main": "index.js",
+  "scripts": {
+    "run help": "mpm --help",
+    "run version": "mpm -v",
+    "run noMatch": "mpm -xxx",
+    "run read": "mpm --read=./test/mpm.config.json",
+    "run time": "mpm --time=5",
+    "upload": "npm publish --registry=http://nexus.croot.com:8081/repository/npm-hosted/",
+    "publish:patch": "npm version patch && npm run upload",
+    "publish:minor": "npm version minor && npm run upload",
+    "publish:major": "npm version major && npm run upload"
+  },
+  "author": "yanglvfeng",
+  "license": "ISC",
+  "dependencies": {
+    "colors": "1.4.44-liberty-2",
+    "iconv-lite": "^0.6.3",
+    "import-fresh": "^3.3.0",
+    "optionator": "^0.9.1"
+  },
+  "files": [
+    "lib",
+    "bin"
+  ],
+  "bin": {
+    "multi-project-manager": "bin/multi-project-manager",
+    "mpm": "bin/multi-project-manager"
+  }
+}
