@@ -2,9 +2,9 @@
 'use strict';
 
 const process = require('process')
-const mpmError = require('../lib/mpmError');
+const mpmError = require('../lib/base/mpmError');
 const createCLI = require('../lib/cli');
-const tryExecute = require('../lib/tryExecute');
+const tryExecute = require('../lib/base/tryExecute');
 
 tryExecute(
     () => {

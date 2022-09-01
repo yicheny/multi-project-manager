@@ -4,6 +4,9 @@
   "description": "Multiple project management scripts",
   "main": "index.js",
   "scripts": {
+    "run jsConfig": "mpm --config ./test/mpm.config.js",
+    "run jsonConfig": "mpm --config ./test/mpm.config.json",
+    "run errorConfig": "mpm --config ./test/mpm.config.txt",
     "run help": "mpm --help",
     "run version": "mpm -v",
     "run noMatch": "mpm -xxx",
