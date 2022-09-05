@@ -1,15 +1,22 @@
+const {testPlugin,deleteGitPlugin} = require('./plugins')
+
 module.exports = function createConfig() {
     return {
         "createLog":false,
         "errorLogPath": "./logs",
         "operations": [
-            'git init',
-            "git add .",
-            "git status",
-            "git commit -m \"this is commit 1\"",
-            "git log",
+            // 'git init',
+            // "git add .",
+            // "git status",
+            // "git commit -m \"this is commit 1\"",
+            // "git log",
             // "git branch 0.0.1",
             // "git branch -a"
+        ],
+        "plugins":[
+            testPlugin(),
+            deleteGitPlugin(),
+            // deleteGitPlugin(true)
         ],
         "projects": [
             './project1',
@@ -34,3 +41,5 @@ module.exports = function createConfig() {
     }
 
 }
+
+
